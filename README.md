@@ -4,7 +4,7 @@ Code for recreating results from "A Bayesian nonparametric semi-supervised model
 ## Fitting
 alignment-scripts contains python scripts for fitting the model to data.
 
-## Requirements
+### Requirements
 sstGPLVM is implemented in python 2.7 with:
 
 1. numpy 1.14.5
