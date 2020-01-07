@@ -2,7 +2,7 @@
 Code for recreating results from "A Bayesian nonparametric semi-supervised model for integration of multiple single-cell experiments." Given multiple single cell RNA seq datasets with some shared genes, sstGPVLM fits a joint latent space that can be used for downstream analysis. 
 
 ## Fitting
-alignment-scripts contains python scripts for fitting the model to data. It also contains a python script for calculating the average $W_2$-based distance of a fit from the true latent space.
+alignment-scripts contains python scripts for fitting the model to data. It also contains a python script for calculating the average *W_2*-based distance of a fit from the true latent space.
 
 ### Requirements
 sstGPLVM is implemented in python 2.7 with:
