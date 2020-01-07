@@ -6,3 +6,6 @@ analysis-scripts contains python scripts for fitting the model to data. Requirem
 
 ## Analysis
 analysis-nbs contains jupyter notebooks and the required output files for recreating figures from the paper. 
+
+## Data
+
