@@ -17,7 +17,7 @@ sstGPLVM is implemented in python 2.7 with:
 ### Running
 **Input**: 
 1. A numpy array or sparse csr/csc matrix of scRNA counts (or other types data) with format *N* cells (samples) as rows by *p* genes (features) as columns (loaded to ```y_train```). Input this directly into the code as y_train.
-2. A numpy array of relevant metadata with format *N* cells as rows by *m* metadata fatures (loaded to ```z_init```).
+2. A numpy array of relevant metadata with format *N* cells as rows by *m* metadata fatures (loaded to ```z_init```). It is also possible to structure the metadata with some missing cells that can be imputed (see ```alignment-seqfish``` for an example).
 
 **Options**:
 The following parameters can be adjusted in the script to adjust inference:
@@ -41,6 +41,7 @@ The following parameters can be adjusted in the script to adjust inference:
 2. Gene-specific noise
 3. Kernel hyperparameters (variance, lengthscale)
 4. Inducing points in latent and high-dimensional space
+5. Impute
 
 ## Analysis
 analysis-nbs contains jupyter notebooks and the required output files for recreating figures from the paper. 
