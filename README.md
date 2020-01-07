@@ -41,7 +41,7 @@ The following parameters can be adjusted in the script to adjust inference:
 2. Gene-specific noise
 3. Kernel hyperparameters (variance, lengthscale)
 4. Inducing points in latent and high-dimensional space
-5. Impute
+5. The final metadata (*Z*) variables
 
 ## Analysis
 analysis-nbs contains jupyter notebooks and the required output files for recreating figures from the paper. 
