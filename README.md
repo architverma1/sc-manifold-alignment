@@ -2,7 +2,7 @@
 Code for recreating results from "A Bayesian nonparametric semi-supervised model for integration of multiple single-cell experiments." Given multiple single cell RNA seq datasets with some shared genes, sstGPVLM fits a joint latent space that can be used for downstream analysis. 
 
 ## Fitting
-alignment-scripts contains python scripts for fitting the model to data.
+alignment-scripts contains python scripts for fitting the model to data. It also contains a python script for calculating the average $W_2$-based distance of a fit from the true latent space.
 
 ### Requirements
 sstGPLVM is implemented in python 2.7 with:
@@ -17,7 +17,7 @@ sstGPLVM is implemented in python 2.7 with:
 ### Running
 **Input**: 
 1. A numpy array or sparse csr/csc matrix of scRNA counts (or other types data) with format *N* cells (samples) as rows by *p* genes (features) as columns (loaded to ```y_train```). Input this directly into the code as y_train.
-2. A numpy array of relevant metadata with format *N* cells as rows by *m* metadata fatures.
+2. A numpy array of relevant metadata with format *N* cells as rows by *m* metadata fatures (loaded to ```z_init```).
 
 **Options**:
 The following parameters can be adjusted in the script to adjust inference:
@@ -26,7 +26,7 @@ The following parameters can be adjusted in the script to adjust inference:
 2. Use t-Distribution error model (otherwise normal error) (```--T```) - default: True
 3. Initial Number of Dimensions (```--Q```) - default: 3
 4. Kernel Function
-    + Matern 1/2, 3/2, 5/2 (```--m12, --m32, --m52```) - default: True
+    + Matern 1/2, 3/2, 5/2 (```--m12, --m32, --m52```) - default: False
     + Periodic (```--per_bool```) - default: False
 5. Number of Inducing Points (```--m```) - default: 30
 6. Batch size (```--M```) - default: 250
