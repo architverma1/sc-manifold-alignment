@@ -1,6 +1,13 @@
 # sc-manifold-alignment
 Code for recreating results from "A Bayesian nonparametric semi-supervised model for integration of multiple single-cell experiments." Given multiple single cell RNA seq datasets with some shared genes, sstGPVLM fits a joint latent space that can be used for downstream analysis. 
 
+## Data Processing
+processing contains jupter notebooks for converting the orignal data to hdf5 files inputed to scripts. Simulated data can be generated in the analysis notebook provided. Original single cell data is available at:
+
+1. Pancrease data: https://github.com/MarioniLab/MNN2017. Follow the processing steps pre-alignment in the provided by the R files first.
+2. Gilad data: https://github.com/jdblischak/singlecell-qtl
+3. seqFISH+ data: https://github.com/CaiGroup/seqFISH-PLUS
+
 ## Fitting
 alignment-scripts contains python scripts for fitting the model to data. It also contains a python script for calculating the average Wasserstein-based distance of a fit from the true latent space.
 
@@ -13,6 +20,7 @@ sstGPLVM is implemented in python 2.7 with:
 4. tensorflow 1.6.0
 5. edwards 1.3.5
 6. sklearn 0.19.2
+
 
 ### Running
 **Input**: 
@@ -46,5 +54,5 @@ The following parameters can be adjusted in the script to adjust inference:
 ## Analysis
 analysis-nbs contains jupyter notebooks and the required output files for recreating figures from the paper. 
 
-## Data
+
 
